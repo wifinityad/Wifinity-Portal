@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Wifi, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import logoSrc from "@assets/wifinity_logo_1779826687400.png";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -42,13 +43,13 @@ export default function Navbar() {
     >
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex items-center justify-between">
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="bg-primary text-primary-foreground p-2 rounded-xl group-hover:rotate-12 transition-transform duration-300">
-              <Wifi className="w-6 h-6" />
-            </div>
-            <span className="text-2xl font-bold tracking-tight text-white">
-              Wifinity
-            </span>
+          <a href="#" className="flex items-center group">
+            <img
+              src={logoSrc}
+              alt="Wifinity"
+              className="h-12 w-auto drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+              data-testid="img-logo-navbar"
+            />
           </a>
 
           {/* Desktop Nav */}

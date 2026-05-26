@@ -1,4 +1,5 @@
-import { Wifi, MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone } from "lucide-react";
+import logoSrc from "@assets/wifinity_logo_1779826687400.png";
 
 const sections = [
   {
@@ -31,11 +32,13 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
           {/* Brand */}
           <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <div className="bg-primary text-primary-foreground p-2 rounded-xl">
-                <Wifi className="w-6 h-6" />
-              </div>
-              <span className="text-2xl font-bold tracking-tight text-white">Wifinity</span>
+            <a href="#" className="inline-flex mb-4">
+              <img
+                src={logoSrc}
+                alt="Wifinity"
+                className="h-16 w-auto drop-shadow-lg"
+                data-testid="img-logo-footer"
+              />
             </a>
             <p className="text-white/50 leading-relaxed max-w-sm mb-6">
               Conexion de fibra optica para tu hogar o negocio. Velocidad real, soporte local, sin sorpresas.
