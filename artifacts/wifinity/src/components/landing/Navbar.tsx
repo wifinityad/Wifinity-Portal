@@ -17,6 +17,7 @@ export default function Navbar() {
   const navLinks = [
     { name: "Paquetes", href: "#paquetes" },
     { name: "Promociones", href: "#promociones" },
+    { name: "Cobertura", href: "#cobertura" },
     { name: "Contratar", href: "#contratar" },
     { name: "Soporte", href: "#reportes" },
     { name: "FAQ", href: "#faq" },

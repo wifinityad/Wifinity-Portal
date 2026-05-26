@@ -3,6 +3,7 @@ import Navbar from "@/components/landing/Navbar";
 import Hero from "@/components/landing/Hero";
 import Packages from "@/components/landing/Packages";
 import Promotions from "@/components/landing/Promotions";
+import Coverage from "@/components/landing/Coverage";
 import ContractForm from "@/components/landing/ContractForm";
 import SupportForms from "@/components/landing/SupportForms";
 import FAQ from "@/components/landing/FAQ";
@@ -16,6 +17,7 @@ export default function Home() {
         <Hero />
         <Packages />
         <Promotions />
+        <Coverage />
         <ContractForm />
         <SupportForms />
         <FAQ />
