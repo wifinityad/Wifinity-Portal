@@ -1,5 +1,5 @@
 import { MessageCircle, Phone } from "lucide-react";
-import logoSrc from "@assets/wifinity_logo_1779826687400.png";
+import logoSrc from "@assets/wifinity_logo_trans_1779826721675.avif";
 
 const sections = [
   {

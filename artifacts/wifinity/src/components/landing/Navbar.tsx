@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoSrc from "@assets/wifinity_logo_1779826687400.png";
+import logoSrc from "@assets/wifinity_logo_trans_1779826721675.avif";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
