@@ -1,0 +1,8 @@
+uploads = []
+outputs = []
+
+[[generated]]
+id = "KSULGO0Dk03XCwKTKz9BN"
+uri = "file://artifacts/wifinity/public/hero-bg.png"
+type = "image"
+title = "Abstract tech blue cyan background"
