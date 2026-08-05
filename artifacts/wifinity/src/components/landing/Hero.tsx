@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Wifi, Shield, Clock } from "lucide-react";
 
 const stats = [
-  { icon: Zap, label: "Hasta 100 Mbps", desc: "Velocidad real garantizada" },
+  { icon: Zap, label: "Hasta 300 Megas", desc: "Velocidad real garantizada" },
   { icon: Shield, label: "99.9% uptime", desc: "Red estable y confiable" },
-  { icon: Clock, label: "Soporte rapido", desc: "Respuesta en minutos" },
+  { icon: Clock, label: "Soporte rapido", desc: "Equipo local disponible" },
 ];
 
 export default function Hero() {
