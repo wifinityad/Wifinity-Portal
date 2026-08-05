@@ -1,4 +1,4 @@
-import { MessageCircle, Phone } from "lucide-react";
+import { MessageCircle, Phone, MapPin } from "lucide-react";
 import logoSrc from "@assets/wifinity_logo_trans_1779826721675.avif";
 
 const sections = [
@@ -6,7 +6,7 @@ const sections = [
     title: "Servicio",
     links: [
       { name: "Paquetes", href: "#paquetes" },
-      { name: "Promociones", href: "#promociones" },
+      { name: "Cobertura", href: "#cobertura" },
       { name: "Contratar", href: "#contratar" },
     ],
   },
@@ -41,28 +41,58 @@ export default function Footer() {
               />
             </a>
             <p className="text-white/50 leading-relaxed max-w-sm mb-6">
-              Conexion de fibra optica para tu hogar o negocio. Velocidad real, soporte local, sin sorpresas.
+              Conexión de internet para tu hogar o negocio. Velocidad real, soporte local, sin sorpresas.
             </p>
+
+            {/* Offices */}
+            <div className="space-y-5 mb-6">
+              <div>
+                <p className="text-white/80 font-semibold text-sm mb-1">📍 Oficinas Wifinity Agua Dulce</p>
+                <p className="text-white/50 text-sm leading-relaxed">Col. Benito Juárez, calle Emiliano Zapata #10, CP 96680</p>
+                <a
+                  href="tel:9231117996"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm mt-1"
+                  data-testid="link-tel-aguadulce"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  923-111-7996
+                </a>
+              </div>
+              <div>
+                <p className="text-white/80 font-semibold text-sm mb-1">📍 Módulo Tonalá</p>
+                <p className="text-white/50 text-sm leading-relaxed">Calle Benito Juárez, CP 96390, a un costado del parque Tonalá</p>
+                <a
+                  href="tel:9231208437"
+                  className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium text-sm mt-1"
+                  data-testid="link-tel-tonala"
+                >
+                  <Phone className="w-3.5 h-3.5" />
+                  923-120-8437
+                </a>
+              </div>
+            </div>
+
+            {/* WhatsApp contacts */}
             <div className="flex flex-col gap-3">
               <a
-                href={`https://wa.me/584120000001`}
+                href="https://wa.me/529231117996"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors font-medium"
                 data-testid="link-whatsapp-promotores"
               >
                 <MessageCircle className="w-4 h-4" />
-                Promotores: +58 412 000 0001
+                WhatsApp Agua Dulce: 923-111-7996
               </a>
               <a
-                href={`https://wa.me/584120000002`}
+                href="https://wa.me/529231208437"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300 transition-colors font-medium"
                 data-testid="link-whatsapp-soporte"
               >
-                <Phone className="w-4 h-4" />
-                Soporte: +58 412 000 0002
+                <MessageCircle className="w-4 h-4" />
+                WhatsApp Tonalá: 923-120-8437
               </a>
             </div>
           </div>
@@ -95,8 +125,9 @@ export default function Footer() {
           <p className="text-white/30 text-sm">
             © {new Date().getFullYear()} Wifinity. Todos los derechos reservados.
           </p>
-          <p className="text-white/20 text-xs">
-            Proveedor de internet local — Conectando tu comunidad
+          <p className="text-white/20 text-xs flex items-center gap-1">
+            <MapPin className="w-3 h-3" />
+            Agua Dulce & Tonalá, Veracruz — Conectando tu comunidad
           </p>
         </div>
       </div>

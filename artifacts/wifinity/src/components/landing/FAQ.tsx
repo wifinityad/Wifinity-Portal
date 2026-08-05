@@ -9,36 +9,24 @@ import {
 
 const faqs = [
   {
-    q: "Como contrato el servicio de Wifinity?",
-    a: "Es muy sencillo. Completa el formulario en la seccion Contratar de esta pagina con tu nombre, telefono y direccion. Automaticamente se abrira WhatsApp con tu informacion lista para enviarsela a uno de nuestros promotores, quien te contactara en minutos.",
+    q: "¿Cómo contrato el servicio de Wifinity?",
+    a: `Contratar Wifinity es muy sencillo. Puedes comunicarte con nosotros por WhatsApp, llamada telefónica o a través de nuestras redes sociales. Nuestro equipo verificará la cobertura en tu domicilio y te ayudará a elegir el plan que mejor se adapte a tus necesidades.\n\nAtención Agua Dulce: 923-111-7996\nAtención Tonalá: 923-120-8437`,
   },
   {
-    q: "Cuanto tiempo tarda la instalacion?",
-    a: "Una vez aprobada tu solicitud, nuestro equipo tecnico se pone en contacto contigo para coordinar la visita. En la mayoria de los casos la instalacion se realiza dentro de las 24 a 48 horas habiles.",
+    q: "¿Cuánto tiempo tarda la instalación?",
+    a: "Una vez confirmado el servicio y la disponibilidad en tu zona, la instalación generalmente se realiza en un plazo de 2 a 3 días hábiles, dependiendo de la agenda técnica y las condiciones del lugar.",
   },
   {
-    q: "Tienen cobertura en mi zona?",
-    a: "Contamos con cobertura en varias zonas. Puedes consultarlo directamente con nuestros promotores al momento de contratar; ellos verifican la disponibilidad en tu direccion exacta de forma rapida.",
+    q: "¿Hay cobertura en mi zona?",
+    a: "Wifinity continúa expandiendo su cobertura. Contáctanos con tu dirección o ubicación y con gusto verificaremos si contamos con servicio en tu área.",
   },
   {
-    q: "Que pasa si mi internet falla?",
-    a: "Usua el formulario de Falla Tecnica en la seccion Reportes de esta pagina. Tu reporte llega directamente por WhatsApp al equipo tecnico a cargo, quien se comunicara contigo para diagnosticar y resolver la falla lo antes posible.",
+    q: "¿Qué pasa si mi servicio de internet presenta una falla?",
+    a: "Si experimentas alguna interrupción en el servicio, puedes comunicarte con nuestro equipo de soporte técnico a través del formulario de Reportes en esta página o llamarnos directamente. Revisaremos tu caso y trabajaremos para restablecer tu conexión lo antes posible.",
   },
   {
-    q: "Puedo cambiar de plan?",
-    a: "Si, puedes cambiar a un plan mayor en cualquier momento. Contacta a nuestros promotores por la seccion Contratar o directamente por WhatsApp y ellos gestionaran el cambio sin interrumpir tu servicio.",
-  },
-  {
-    q: "Tienen soporte tecnico disponible?",
-    a: "Nuestro equipo de soporte esta disponible para atender reportes de lunes a sabado. Para emergencias criticas de servicio tambien contamos con atencion fuera de horario. Usa el formulario de reporte en esta pagina para contactarnos.",
-  },
-  {
-    q: "Como pago mi factura?",
-    a: "Los metodos de pago disponibles se informan al momento de contratar el servicio. Generalmente manejamos transferencias bancarias y pago movil. Tu promotor te indicara todas las opciones disponibles en tu zona.",
-  },
-  {
-    q: "Que equipos incluye la instalacion?",
-    a: "La instalacion incluye el router WiFi de alta potencia necesario para tu plan. Los planes Premium y Ultra incluyen equipos de mayor alcance. Si necesitas cobertura adicional en tu hogar, nuestros tecnicos te asesoraran sobre la mejor solucion.",
+    q: "¿Necesito estar presente durante la instalación?",
+    a: "Sí, es necesario que un adulto esté presente para permitir el acceso al domicilio y confirmar que la instalación quedó funcionando correctamente.",
   },
 ];
 
@@ -60,7 +48,7 @@ export default function FAQ() {
             Todo lo que necesitas saber
           </h2>
           <p className="text-lg text-white/60 max-w-2xl mx-auto">
-            Resolvemos las dudas mas comunes sobre nuestro servicio. Si no encuentras tu pregunta, escribe a nuestros promotores.
+            Resolvemos las dudas más comunes sobre nuestro servicio. Si no encuentras tu pregunta, escríbenos directamente.
           </p>
         </motion.div>
 
@@ -88,7 +76,7 @@ export default function FAQ() {
                   <AccordionTrigger className="text-left font-semibold text-white hover:text-primary hover:no-underline py-5 text-base">
                     {faq.q}
                   </AccordionTrigger>
-                  <AccordionContent className="text-white/60 leading-relaxed pb-5">
+                  <AccordionContent className="text-white/60 leading-relaxed pb-5 whitespace-pre-line">
                     {faq.a}
                   </AccordionContent>
                 </AccordionItem>
@@ -104,7 +92,7 @@ export default function FAQ() {
             className="mt-10 text-center p-8 rounded-3xl bg-gradient-to-br from-primary/10 to-secondary/10 border border-primary/20"
           >
             <p className="text-white/70 mb-4 text-lg">
-              No encontraste tu respuesta? Nuestro equipo esta listo para ayudarte.
+              ¿No encontraste tu respuesta? Nuestro equipo está listo para ayudarte.
             </p>
             <button
               onClick={() => document.querySelector("#contratar")?.scrollIntoView({ behavior: "smooth" })}

@@ -6,8 +6,7 @@ import { z } from "zod";
 import { MessageCircle, CheckCircle2, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 import {
   Select,
   SelectContent,
@@ -15,19 +14,18 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
 const schema = z.object({
   nombre: z.string().min(2, "Ingresa tu nombre completo"),
   telefono: z.string().min(7, "Ingresa un teléfono válido"),
   direccion: z.string().min(5, "Ingresa tu dirección"),
+  referencia: z.string().min(3, "Ingresa una referencia del lugar"),
   paquete: z.string().min(1, "Selecciona un paquete"),
-  mensaje: z.string().optional(),
 });
 
 type FormData = z.infer<typeof schema>;
 
-const WHATSAPP_NUMBER = "584120000001";
+const WHATSAPP_NUMBER = "529231117996";
 
 export default function ContractForm() {
   const [submitted, setSubmitted] = useState(false);
@@ -38,14 +36,19 @@ export default function ContractForm() {
       nombre: "",
       telefono: "",
       direccion: "",
+      referencia: "",
       paquete: "",
-      mensaje: "",
     },
   });
 
   const onSubmit = (data: FormData) => {
     const text = encodeURIComponent(
-      `Hola Wifinity! Me interesa contratar el servicio.\n\nNombre: ${data.nombre}\nTeléfono: ${data.telefono}\nDirección: ${data.direccion}\nPaquete: ${data.paquete}${data.mensaje ? `\nMensaje: ${data.mensaje}` : ""}`
+      `Hola Wifinity! Me interesa contratar el servicio.\n\n` +
+      `Nombre completo: ${data.nombre}\n` +
+      `Teléfono de contacto: ${data.telefono}\n` +
+      `Dirección: ${data.direccion}\n` +
+      `Referencia del lugar: ${data.referencia}\n` +
+      `Paquete de interés: ${data.paquete}`
     );
     window.open(`https://wa.me/${WHATSAPP_NUMBER}?text=${text}`, "_blank");
     setSubmitted(true);
@@ -100,44 +103,24 @@ export default function ContractForm() {
             ) : (
               <Form {...form}>
                 <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <FormField
-                      control={form.control}
-                      name="nombre"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white/80">Nombre completo</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="Juan Pérez"
-                              className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
-                              data-testid="input-nombre-contrato"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                    <FormField
-                      control={form.control}
-                      name="telefono"
-                      render={({ field }) => (
-                        <FormItem>
-                          <FormLabel className="text-white/80">Teléfono</FormLabel>
-                          <FormControl>
-                            <Input
-                              placeholder="04XX-XXXXXXX"
-                              className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
-                              data-testid="input-telefono-contrato"
-                              {...field}
-                            />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
-                      )}
-                    />
-                  </div>
+                  <FormField
+                    control={form.control}
+                    name="nombre"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white/80">Nombre completo</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Juan Pérez"
+                            className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
+                            data-testid="input-nombre-contrato"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
 
                   <FormField
                     control={form.control}
@@ -147,9 +130,47 @@ export default function ContractForm() {
                         <FormLabel className="text-white/80">Dirección</FormLabel>
                         <FormControl>
                           <Input
-                            placeholder="Calle, sector, ciudad"
+                            placeholder="Calle, número, colonia"
                             className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
                             data-testid="input-direccion-contrato"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="referencia"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white/80">Referencia del lugar</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="Ej: frente al parque, a un lado de la tienda..."
+                            className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
+                            data-testid="input-referencia-contrato"
+                            {...field}
+                          />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>
+                    )}
+                  />
+
+                  <FormField
+                    control={form.control}
+                    name="telefono"
+                    render={({ field }) => (
+                      <FormItem>
+                        <FormLabel className="text-white/80">Número de teléfono de contacto</FormLabel>
+                        <FormControl>
+                          <Input
+                            placeholder="923-XXX-XXXX"
+                            className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary"
+                            data-testid="input-telefono-contrato"
                             {...field}
                           />
                         </FormControl>
@@ -174,32 +195,11 @@ export default function ContractForm() {
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent className="bg-card border-white/10">
-                            <SelectItem value="Básico - 10 Mbps">Básico — 10 Mbps</SelectItem>
-                            <SelectItem value="Estándar - 20 Mbps">Estándar — 20 Mbps</SelectItem>
-                            <SelectItem value="Premium - 50 Mbps">Premium — 50 Mbps</SelectItem>
-                            <SelectItem value="Ultra - 100 Mbps">Ultra — 100 Mbps</SelectItem>
+                            <SelectItem value="Básico — 150 Megas ($350/mes)">Básico — 150 Megas ($350/mes)</SelectItem>
+                            <SelectItem value="Plus — 200 Megas ($450/mes)">Plus — 200 Megas ($450/mes)</SelectItem>
+                            <SelectItem value="Premium — 300 Megas ($650/mes)">Premium — 300 Megas ($650/mes)</SelectItem>
                           </SelectContent>
                         </Select>
-                        <FormMessage />
-                      </FormItem>
-                    )}
-                  />
-
-                  <FormField
-                    control={form.control}
-                    name="mensaje"
-                    render={({ field }) => (
-                      <FormItem>
-                        <FormLabel className="text-white/80">Mensaje adicional (opcional)</FormLabel>
-                        <FormControl>
-                          <Textarea
-                            placeholder="Cualquier información adicional o pregunta..."
-                            className="bg-white/5 border-white/10 text-white placeholder:text-white/30 focus:border-primary resize-none"
-                            rows={3}
-                            data-testid="textarea-mensaje-contrato"
-                            {...field}
-                          />
-                        </FormControl>
                         <FormMessage />
                       </FormItem>
                     )}

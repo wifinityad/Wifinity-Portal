@@ -17,7 +17,7 @@ import {
 } from "@/components/ui/select";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
 
-const WHATSAPP_SOPORTE = "584120000002";
+const WHATSAPP_SOPORTE = "529231208437";
 
 const reporteSchema = z.object({
   nombre: z.string().min(2, "Ingresa tu nombre"),

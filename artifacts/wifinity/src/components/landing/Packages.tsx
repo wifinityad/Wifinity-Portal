@@ -6,49 +6,37 @@ import { Button } from "@/components/ui/button";
 const plans = [
   {
     name: "Básico",
-    speed: "10 Mbps",
-    price: "$15",
+    speed: "150 Megas",
+    price: "$350",
     features: [
       "Navegación web y redes sociales",
       "Streaming en HD",
-      "1-2 dispositivos simultáneos",
-      "Soporte local 24/7",
+      "Videollamadas fluidas",
+      "Soporte local",
     ],
   },
   {
-    name: "Estándar",
-    speed: "20 Mbps",
-    price: "$25",
+    name: "Plus",
+    speed: "200 Megas",
+    price: "$450",
     features: [
       "Trabajo desde casa",
       "Streaming en 4K",
       "Juegos en línea",
-      "3-5 dispositivos simultáneos",
-      "Soporte local 24/7",
+      "Múltiples dispositivos",
+      "Soporte local",
     ],
     popular: true,
   },
   {
     name: "Premium",
-    speed: "50 Mbps",
-    price: "$40",
+    speed: "300 Megas",
+    price: "$650",
     features: [
       "Descargas ultrarrápidas",
       "Streaming múltiple en 4K",
       "Juegos sin lag",
-      "6-10 dispositivos simultáneos",
-      "Soporte local 24/7",
-    ],
-  },
-  {
-    name: "Ultra",
-    speed: "100 Mbps",
-    price: "$60",
-    features: [
-      "Fibra óptica directa",
-      "Velocidad extrema",
-      "Hogares inteligentes",
-      "Ilimitados dispositivos",
+      "Hogar completo conectado",
       "Soporte prioritario",
     ],
   },
@@ -63,11 +51,11 @@ export default function Packages() {
             Elige tu velocidad ideal
           </h2>
           <p className="text-lg text-white/60">
-            Planes diseñados para cada tipo de familia. Paga solo por lo que necesitas, con la mejor estabilidad de la ciudad.
+            Planes diseñados para cada tipo de familia. Paga solo por lo que necesitas, con la mejor estabilidad de la región.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
           {plans.map((plan, i) => (
             <motion.div
               key={plan.name}
@@ -87,7 +75,7 @@ export default function Packages() {
                   Más popular
                 </div>
               )}
-              
+
               <div className="mb-8">
                 <h3 className="text-xl font-medium text-white/80 mb-2">{plan.name}</h3>
                 <div className="flex items-baseline gap-2 mb-2">
