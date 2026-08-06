@@ -58,7 +58,7 @@ export default function Hero() {
             className="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed"
           >
             Internet de fibra optica de alta velocidad para tu hogar o negocio.
-            Sin caidas, sin contratos enganosos. Solo velocidad pura y un equipo
+            Sin caidas, sin contratos engañosos. Solo velocidad pura y un equipo
             local que si te responde.
           </motion.p>
 
