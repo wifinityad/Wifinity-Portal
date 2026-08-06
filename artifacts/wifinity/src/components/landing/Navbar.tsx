@@ -47,7 +47,7 @@ export default function Navbar() {
             <img
               src={logoSrc}
               alt="Wifinity"
-              className="h-20 w-auto drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+              className="h-12 w-auto drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
               data-testid="img-logo-navbar"
             />
           </a>

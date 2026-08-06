@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ChevronRight, Zap, Wifi, Shield, Clock } from "lucide-react";
+import logoSrc from "@assets/wifinity_logo_trans_1779826721675.avif";
 
 const stats = [
   { icon: Zap, label: "Hasta 300 Megas", desc: "Velocidad real garantizada" },
@@ -29,7 +30,8 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="max-w-4xl">
+        <div className="flex items-center justify-between gap-8">
+        <div className="max-w-2xl flex-1">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -110,6 +112,22 @@ export default function Hero() {
               );
             })}
           </motion.div>
+        </div>
+
+        {/* Logo grande lado derecho */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="hidden lg:flex items-center justify-center flex-shrink-0"
+        >
+          <img
+            src={logoSrc}
+            alt="Wifinity"
+            className="w-80 xl:w-96 drop-shadow-[0_0_60px_rgba(0,200,255,0.25)]"
+          />
+        </motion.div>
+
         </div>
       </div>
     </section>
