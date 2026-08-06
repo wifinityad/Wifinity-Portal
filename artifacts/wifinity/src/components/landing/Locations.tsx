@@ -20,7 +20,7 @@ const offices = [
     phone: "923-120-8437",
     phoneFull: "529231208437",
     phoneTel: "9231208437",
-    mapUrl: "https://maps.google.com/?q=Congregacion+Tonala+Agua+Dulce+Veracruz+parque+central",
+    mapUrl: "https://maps.google.com/?q=Espacio+Alimentario+Tonala+Agua+Dulce+Veracruz",
     color: "secondary",
   },
 ];
