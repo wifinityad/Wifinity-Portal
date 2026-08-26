@@ -33,7 +33,7 @@ const plans = [
     speed: "300 Megas",
     price: "$650",
     features: [
-      "Descargas ultrarrápidas",
+      "Descargas ultra rápidas",
       "Streaming múltiple en 4K",
       "Juegos sin lag",
       "Hogar completo conectado",
