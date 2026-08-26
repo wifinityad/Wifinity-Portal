@@ -77,7 +77,7 @@ export default function ContractForm() {
               Contratar servicio
             </h2>
             <p className="text-lg text-white/60">
-              Completa el formulario y un promotor te contactará por WhatsApp en minutos.
+              Completa el formulario y un promotor te contactará vía WhatsApp.
             </p>
           </motion.div>
 
