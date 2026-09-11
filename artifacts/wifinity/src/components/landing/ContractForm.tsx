@@ -71,7 +71,7 @@ export default function ContractForm() {
           >
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 mb-4 text-primary">
               <MessageCircle className="w-4 h-4" />
-              <span className="text-sm font-medium">Via WhatsApp</span>
+              <span className="text-sm font-medium">Vía WhatsApp</span>
             </div>
             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-white">
               Contratar servicio
@@ -217,7 +217,7 @@ export default function ContractForm() {
                   </Button>
 
                   <p className="text-center text-sm text-white/40">
-                    Se abrirá WhatsApp con tu información. Un promotor te responderá en minutos.
+                    Se abrirá WhatsApp con tu información. Un promotor te responderá pronto.
                   </p>
                 </form>
               </Form>

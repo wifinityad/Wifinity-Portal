@@ -17,10 +17,10 @@ const promos = [
   {
     icon: Clock,
     badge: "Tiempo limitado",
-    title: "Instalacion gratuita",
+    title: "Instalación gratuita",
     description:
-      "Instalamos tu conexion de fibra optica sin costo adicional. Tecnico certificado en tu hogar en menos de 48 horas.",
-    cta: "Solicitar instalacion",
+      "Instalamos tu conexión de fibra óptica sin costo adicional. Técnico certificado en tu hogar en menos de 48 horas.",
+    cta: "Solicitar instalación",
     gradient: "from-blue-600/20 to-indigo-600/10",
     border: "border-blue-500/30",
     glow: "shadow-[0_0_40px_-15px_rgba(99,102,241,0.4)]",

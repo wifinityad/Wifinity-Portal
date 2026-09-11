@@ -6,7 +6,7 @@ import logoSrc from "@assets/wifinity_logo_trans_1779826721675.avif";
 const stats = [
   { icon: Zap, label: "Hasta 300 Megas", desc: "Velocidad real garantizada" },
   { icon: Shield, label: "99.9% uptime", desc: "Red estable y confiable" },
-  { icon: Clock, label: "Soporte rapido", desc: "Equipo local disponible" },
+  { icon: Clock, label: "Soporte rápido", desc: "Equipo local disponible" },
 ];
 
 export default function Hero() {
