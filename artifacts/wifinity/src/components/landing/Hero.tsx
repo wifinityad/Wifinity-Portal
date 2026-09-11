@@ -40,7 +40,7 @@ export default function Hero() {
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/5 border border-white/10 mb-6 backdrop-blur-sm text-primary"
             >
               <Zap className="w-4 h-4 fill-primary" />
-              <span className="text-sm font-medium">La red mas rapida de tu zona</span>
+              <span className="text-sm font-medium">La red más rápida de tu zona.</span>
             </motion.div>
 
             <motion.h1
@@ -51,7 +51,7 @@ export default function Hero() {
             >
               Conecta tu mundo{" "}
               <br />
-              <span className="text-gradient">sin limites.</span>
+              <span className="text-gradient">Sin límites.</span>
             </motion.h1>
 
             <motion.p
@@ -60,9 +60,9 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-lg md:text-xl text-white/70 mb-10 max-w-xl leading-relaxed"
             >
-              Internet de fibra optica de alta velocidad para tu hogar o negocio.
-              Sin caidas, sin contratos engañosos. Solo velocidad pura y un equipo
-              local que si te responde.
+              Internet de fibra óptica de alta velocidad para tu hogar o negocio.
+              Sin caídas, sin contratos engañosos. Solo velocidad pura y un equipo
+              local que sí te responde.
             </motion.p>
 
             <motion.div
